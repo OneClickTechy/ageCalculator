@@ -24,6 +24,9 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow:  rgba(224, 101, 208, 0.884) -10px -15px 50px;
 }
 .text{
     color: white;
