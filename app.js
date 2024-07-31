@@ -1,14 +1,11 @@
-let inputBirthDate = document.querySelector("#inputBirthDate");
-let result = document.querySelector("#result");
-// let birthMonth = inputBirthDate.getMonth();
-// let birthDate = inputBirthDate.getDate();
-let calc = document.getElementById("calc");
-const currentDate = new Date().getFullYear();
+const birthDay = new Date(document.querySelector("#birthDay").value);
+const calc = document.querySelector("#calc");
 
+const birthDate = birthDay.getDate();
+const birthMonth = birthDay.getMonth();
+const birthYear = birthDay.getFullYear();
 calc.addEventListener("click", () => {
-  console.log(currentDate);
-  console.log(new Date(inputBirthDate.value).getFullYear());
-  console.log(currentDate - new Date(inputBirthDate.value).getFullYear());
-  let age = currentDate - new Date(inputBirthDate.value).getFullYear();
-  result.textContent = `Your age is ${age}`;
+  console.log(birthDate, typeof birthDate);
+  console.log(birthMonth, typeof birthMonth);
+  console.log(birthYear, typeof birthYear);
 });
