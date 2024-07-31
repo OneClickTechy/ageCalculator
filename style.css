@@ -53,6 +53,7 @@ input[type="button"]{
 }
 .calc-container div p{
     display: block;
-    
-
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: rgb(128, 128, 128);
 }
