@@ -1,4 +1,4 @@
-const birthDay = new Date("2002-05-04");
+const birthDay = new Date("2002-09-04");
 const currentDay = new Date();
 //get date
 const birthDate = birthDay.getDate();
@@ -17,10 +17,10 @@ let ageYearCount, ageMonthCount, ageDayCount;
 function getYear() {
   if (currentMonth > birthMonth) {
     return currentYear - birthYear;
-  } else if (currentYear < birthMonth) {
+  } else if (currentMonth < birthMonth) {
     return currentYear - 1 - birthYear;
   }
 }
 
+//tmp yearCount
 ageYearCount = getYear();
-console.log(ageYearCount);
