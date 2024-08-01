@@ -1,26 +1,36 @@
-const birthDay = new Date("2002-09-04");
-const currentDay = new Date();
-//get date
-const birthDate = birthDay.getDate();
-const currentDate = currentDay.getDate();
-//get month
-const birthMonth = birthDay.getMonth();
-const currentMonth = currentDay.getMonth();
-//get year
-const birthYear = birthDay.getFullYear();
-const currentYear = currentDay.getFullYear();
+const birthDay = new Date("2002-02-04");
+const currentDay = new Date("2024-08-01");
 
+const birthDayChild = {
+  date: birthDay.getDate(),
+  month: birthDay.getMonth(),
+  year: birthDay.getFullYear(),
+};
+const currentDayChild = {
+  date: currentDay.getDate(),
+  month: currentDay.getMonth(),
+  year: currentDay.getFullYear(),
+};
 //variable declarations
 let ageYearCount, ageMonthCount, ageDayCount;
 
 //chk cd(m) & bd(m)
-function getYear() {
-  if (currentMonth > birthMonth) {
-    return currentYear - birthYear;
-  } else if (currentMonth < birthMonth) {
-    return currentYear - 1 - birthYear;
-  }
+if (currentDayChild.year - birthDayChild.year > 1) {
+  ageYearCount =
+    currentDayChild.month === birthDayChild.month &&
+    currentDayChild.date === birthDayChild.date
+      ? currentDayChild.year - birthDayChild.year
+      : currentDayChild.month > birthDayChild.month
+      ? currentDayChild.year - birthDayChild.year
+      : currentDayChild.year - 1 - birthDayChild.year;
 }
 
+
+
+
+
+
+
+
 //tmp yearCount
-ageYearCount = getYear();
+console.log(ageYearCount);
