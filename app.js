@@ -5,7 +5,7 @@ calculate.addEventListener("click", ageCalculator);
 function ageCalculator() {
   const birthDay = new Date(document.querySelector("#birthDay").value);
   const currentDay = new Date();
-
+  console.log(typeof birthDay.value);
   const birthDayChild = {
     date: birthDay.getDate(),
     month: birthDay.getMonth(),
