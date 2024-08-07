@@ -25,26 +25,31 @@ function ageCalculator() {
     month: currentDayChild.month - birthDayChild.month,
     date: currentDayChild.date - birthDayChild.date,
   };
-
+ //check date value and redefine the month
+ if (result.date < 0) {
+  result.month--;
+  const totalDaysInMonth = totalDays(
+    birthDayChild.year,
+    birthDayChild.month - 1
+  );
+  result.date += totalDaysInMonth;
+}
+console.log(result);
   //check month value and redefine the year
   if (result.month < 0) {
     result.year--;
     result.month += 12;
   }
 
-  //check date value and redefine the month
-  if (result.date < 0) {
-    result.month--;
-    const totalDaysInMonth = totalDays(
-      birthDayChild.year,
-      birthDayChild.month - 1
-    );
-    result.date += totalDaysInMonth;
-  }
-  console.log(result);
+ 
   //calculate total days in the birth month
   function totalDays(year, month) {
     return new Date(year, month + 1, 0).getDate();
   }
   output.textContent = `Yout age is ${result.year} Years ${result.month} months ${result.date} days`;
 }
+
+
+//test
+
+console.log(typeof new Date())
