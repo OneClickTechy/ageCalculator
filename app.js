@@ -5,7 +5,6 @@ calculate.addEventListener("click", ageCalculator);
 function ageCalculator() {
   const birthDay = new Date(document.querySelector("#birthDay").value);
   const currentDay = new Date();
-  console.log(typeof birthDay.value);
   const birthDayChild = {
     date: birthDay.getDate(),
     month: birthDay.getMonth(),
@@ -34,7 +33,6 @@ function ageCalculator() {
   );
   result.date += totalDaysInMonth;
 }
-console.log(result);
   //check month value and redefine the year
   if (result.month < 0) {
     result.year--;
@@ -50,6 +48,3 @@ console.log(result);
 }
 
 
-//test
-
-console.log(typeof new Date())
